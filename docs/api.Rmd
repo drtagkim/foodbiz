@@ -2,6 +2,7 @@
 title: "Data go kr"
 output: html_notebook
 ---
+[HOME](https://github.com/drtagkim/foodbiz/blob/main/README.md)
 
 # API Example
 
@@ -30,3 +31,6 @@ base_url="https://apis.data.go.kr/B551177/StatusOfPassengerWorldWeatherInfo/getP
 example.1.result = get_data(base_url,service_key,parms)
 example.1.result$response$body$items
 ```
+
+
+[HOME](https://github.com/drtagkim/foodbiz/blob/main/README.md)
