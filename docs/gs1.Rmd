@@ -1,0 +1,19 @@
+---
+title: "Data GS1"
+output: html_notebook
+---
+
+[HOME](https://github.com/drtagkim/foodbiz/blob/main/README.md)
+
+```{r}
+source('../R/gs1.R')
+```
+
+```{r}
+get_gs1_search(get_gs1_code('대파',size=29))
+```
+
+
+
+[HOME](https://github.com/drtagkim/foodbiz/blob/main/README.md)
+
