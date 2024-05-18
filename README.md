@@ -1,6 +1,12 @@
-# Introduction
-## Github Page
+# Github Page
 Page: https://drtagkim.github.io/foodbiz/
+
+# R packages to be installed
+
+- dplyr
+- rlist
+- httr
+- jsonlite
 
 ## Project log
 
