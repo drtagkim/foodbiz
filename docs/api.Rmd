@@ -12,10 +12,11 @@ output: html_notebook
 
 ```{r}
 source('../R/httr_api.R')
+source('../R/keys.R')
 ```
 
 ```{r}
-service_key = "IwyTxwaVcL2jPFUhsQdTg0NN22d5uD0PGArotkw1hnziMP4WioZfHMObo6fLyDuzg81zj56j7n2HvhXtnFp+7w=="
+service_key = 
 parms = list(
  numberOfRows=10,
  pageNo=1,
@@ -28,9 +29,35 @@ parms = list(
  type='json'
 )
 base_url="https://apis.data.go.kr/B551177/StatusOfPassengerWorldWeatherInfo/getPassengerArrivalsWorldWeather"
-example.1.result = get_data(base_url,service_key,parms)
+service_key = service_keys$gg$tkkim
+example.1.result = gg_data(base_url,service_key,parms)
 example.1.result$response$body$items
 ```
 
+## Example 02 - 식품안전나라
+
+- [식품안전나라](https://www.foodsafetykorea.go.kr/main.do#firstPage)
+- [Public API - 품목코드](https://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=661&show_cnt=10&start_idx=1&svc_no=I2510&svc_type_cd=API_TYPE06)
+- [바코드연계제품정보](https://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=661&show_cnt=10&start_idx=1&svc_no=C005)
+
+### 바코드 연계제품정보
+
+2018년까지 업데이트된 데이터
+
+```{r}
+food_data('C005',service_key=service_keys$food$tkkim)
+```
+
+```{r}
+food_data('C005',service_key=service_keys$food$tkkim,6,10)
+```
+
+```{r}
+result=food_data('C005',
+          service_key=service_keys$food$tkkim, #service key
+          bar_cd = '8801062441815' #bar code 
+          )
+result$C005$row
+```
 
 [HOME](https://github.com/drtagkim/foodbiz/blob/main/README.md)
