@@ -1,7 +1,8 @@
 # Github Page
 ## Korean Public Data Portal - API Examples
-[Data.go.kr API Example](https://drtagkim.github.io/foodbiz/api.nb.html)
-[GS1 search sample](https://drtagkim.github.io/foodbiz/gs1.nb.html)
+
+- [Data.go.kr API Example](https://drtagkim.github.io/foodbiz/api.nb.html)
+- [GS1 search sample](https://drtagkim.github.io/foodbiz/gs1.nb.html)
 
 # R packages to be installed
 
