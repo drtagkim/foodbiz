@@ -1,0 +1,32 @@
+---
+title: "Data go kr"
+output: html_notebook
+---
+
+# API Example
+
+## Example 01 - Airport weather
+
+[인천국제공항공사_기상 정보](https://www.data.go.kr/data/15095086/openapi.do)
+
+```{r}
+source('../R/httr_api.R')
+```
+
+```{r}
+service_key = "IwyTxwaVcL2jPFUhsQdTg0NN22d5uD0PGArotkw1hnziMP4WioZfHMObo6fLyDuzg81zj56j7n2HvhXtnFp+7w=="
+parms = list(
+ numberOfRows=10,
+ pageNo=1,
+ from_time='0000',
+ to_time='2400',
+ airport='',
+ flight_id='',
+ airline='',
+ lang='K',
+ type='json'
+)
+base_url="https://apis.data.go.kr/B551177/StatusOfPassengerWorldWeatherInfo/getPassengerArrivalsWorldWeather"
+example.1.result = get_data(base_url,service_key,parms)
+example.1.result$response$body$items
+```
